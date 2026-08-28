@@ -1,0 +1,39 @@
+.hero__actions{
+    display:flex;
+    gap:var(--space-4);
+    flex-wrap:wrap;
+}
+
+.hero__stats{
+
+    display:flex;
+
+    gap:var(--space-10);
+
+    flex-wrap:wrap;
+}
+
+.hero__stat{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:var(--space-2);
+}
+
+@media(max-width:1024px){
+
+.hero__actions{
+
+justify-content:center;
+
+}
+
+.hero__stats{
+
+justify-content:center;
+
+}
+
+}

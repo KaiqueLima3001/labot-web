@@ -1,0 +1,7 @@
+.section {
+  position: relative;
+
+  padding-block: var(--space-20);
+
+  scroll-margin-top: var(--space-24);
+}

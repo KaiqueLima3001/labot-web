@@ -1,0 +1,14 @@
+.section-header {
+  display: flex;
+  flex-direction: column;
+
+  gap: var(--space-4);
+
+  margin-bottom: var(--space-16);
+
+  max-width: 760px;
+}
+
+.section-header .badge {
+  margin-bottom: var(--space-2);
+}

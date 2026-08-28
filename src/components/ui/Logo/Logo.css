@@ -1,0 +1,45 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+
+  gap: var(--space-3);
+
+  text-decoration: none;
+
+  user-select: none;
+}
+
+.logo__symbol {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: var(--radius-lg);
+
+  background: var(--color-action-primary);
+
+  color: var(--color-text-inverse);
+
+  box-shadow: var(--shadow-sm);
+}
+
+.logo__text {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo__title {
+  color: var(--color-text-primary);
+
+  font-size: var(--text-lg);
+
+  font-weight: var(--font-weight-bold);
+
+  line-height: var(--line-height-tight);
+}
+
+.logo__subtitle {
+  color: var(--color-text-muted);
+
+  font-size: var(--text-xs);
+}
