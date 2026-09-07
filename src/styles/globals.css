@@ -1,0 +1,51 @@
+@import "../core/design-system/variables.css";
+
+/* Reset & Blindagem Mobile */
+*,
+*::before,
+*::after{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    -webkit-tap-highlight-color: transparent; /* Remove highlight azul no mobile */
+}
+
+html, body {
+    max-width: 100vw;
+    overflow-x: hidden; /* Trava vazamentos laterais de gradients e blurs */
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:var(--color-background-primary);
+    color:var(--color-text-primary);
+    font-family:var(--font-primary);
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+img{
+    display:block;
+    max-width:100%;
+}
+
+button{
+    font:inherit;
+    cursor:pointer;
+    border:none;
+    background:none;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+ul{
+    list-style:none;
+}
+

@@ -1,25 +1,64 @@
-.badge {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+.badge{
 
-  gap: var(--space-2);
+    display:inline-flex;
 
-  padding-inline: var(--space-3);
-  padding-block: var(--space-1);
+    align-items:center;
 
-  border-radius: var(--radius-full);
+    justify-content:center;
 
-  font-family: var(--font-primary);
-  font-size: var(--text-sm);
-  font-weight: var(--font-weight-semibold);
+    gap:var(--space-2);
 
-  line-height: var(--line-height-none);
+    width:fit-content;
 
-  white-space: nowrap;
+    padding-inline:var(--space-3);
 
-  transition:
-    background-color var(--duration-normal) var(--ease-default),
-    color var(--duration-normal) var(--ease-default),
-    border-color var(--duration-normal) var(--ease-default);
+    padding-block:var(--space-2);
+
+    border-radius:var(--radius-full);
+
+    font-family:var(--font-primary);
+
+    font-size:var(--text-sm);
+
+    font-weight:var(--font-weight-semibold);
+
+    line-height:var(--line-height-none);
+
+    white-space:nowrap;
+
+    user-select:none;
+
+    transition:
+        background-color var(--duration-normal) var(--ease-default),
+        color var(--duration-normal) var(--ease-default),
+        border-color var(--duration-normal) var(--ease-default),
+        transform var(--duration-fast) var(--ease-default),
+        box-shadow var(--duration-normal) var(--ease-default);
+}
+
+.badge:hover{
+
+    transform:translateY(-1px);
+}
+
+.badge svg{
+
+    width:14px;
+
+    height:14px;
+
+    flex-shrink:0;
+}
+
+@media (max-width:768px){
+
+    .badge{
+
+        font-size:calc(var(--text-sm) - 1px);
+
+        padding-inline:var(--space-3);
+
+        padding-block:var(--space-1);
+    }
+
 }

@@ -1,12 +1,12 @@
 import type { HTMLAttributes, ReactNode } from "react";
 
 export interface SectionHeaderProps
-  extends HTMLAttributes<HTMLDivElement> {
-  badge?: ReactNode;
+  extends Omit<HTMLAttributes<HTMLDivElement>, "title"> {
+  eyebrow?: ReactNode;
 
-  heading: ReactNode;
+  title: ReactNode;
 
   description?: ReactNode;
 
-  centered?: boolean;
+  align?: "left" | "center";
 }

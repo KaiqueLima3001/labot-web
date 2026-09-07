@@ -2,7 +2,7 @@ import "./Hero.css";
 
 import { Link } from "react-router-dom";
 
-import { heroContent } from "@/content/hero";
+import { heroContent } from "@/constants/hero";
 
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
@@ -10,15 +10,20 @@ import { Container } from "@/components/ui/Container";
 import { Heading } from "@/components/ui/Heading";
 import { Section } from "@/components/ui/Section";
 import { Text } from "@/components/ui/Text";
+
 import { DashboardPreview } from "./DashboardPreview/DashboardPreview";
 
 export function Hero() {
   return (
     <Section className="hero">
-      <Container>
-        <div className="hero__container">
 
-          {/* Conteúdo */}
+      <div className="hero__background" />
+
+      <div className="hero__grid" />
+
+      <Container>
+
+        <div className="hero__container">
 
           <div className="hero__content">
 
@@ -42,17 +47,13 @@ export function Hero() {
 
             <div className="hero__actions">
 
-              <Link
-                to={heroContent.primaryButton.href}
-              >
+              <Link to={heroContent.primaryButton.href}>
                 <Button>
                   {heroContent.primaryButton.label}
                 </Button>
               </Link>
 
-              <a
-                href={heroContent.secondaryButton.href}
-              >
+              <a href={heroContent.secondaryButton.href}>
                 <Button variant="outline">
                   {heroContent.secondaryButton.label}
                 </Button>
@@ -63,10 +64,12 @@ export function Hero() {
             <div className="hero__stats">
 
               {heroContent.stats.map((item) => (
+
                 <div
                   key={item.label}
                   className="hero__stat"
                 >
+
                   <Heading
                     as="h3"
                     size="2xl"
@@ -82,20 +85,26 @@ export function Hero() {
                   </Text>
 
                 </div>
+
               ))}
 
             </div>
 
           </div>
 
-          {/* Preview */}
-
           <div className="hero__preview">
-              <DashboardPreview />
+            <div className="hero__orb hero__orb--1" />
+
+            <div className="hero__orb hero__orb--2" />
+            
+            <DashboardPreview />
+
           </div>
 
         </div>
+
       </Container>
+
     </Section>
   );
 }

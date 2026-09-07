@@ -1,0 +1,138 @@
+.integrationsSection {
+  position: relative;
+  padding: var(--space-16) 0;
+  background-color: var(--color-background-primary);
+  overflow: hidden;
+}
+
+/* O 'black' aqui é estritamente matemático para a máscara alfa do CSS, não é uma cor renderizada */
+.marqueeWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  margin-top: var(--space-12);
+  width: 100%;
+  overflow: hidden;
+  
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+}
+
+.marqueeTrack {
+  display: flex;
+  width: max-content;
+  gap: var(--space-6);
+  transition: transform 0.3s ease;
+}
+
+.marqueeTrack:hover {
+  animation-play-state: paused;
+}
+
+.marqueeTrack.normal {
+  /* Alterado de 40s para 100s para um movimento suave e premium */
+  animation: scrollLeft 100s linear infinite;
+}
+
+.marqueeTrack.reverse {
+  /* Alterado de 40s para 100s */
+  animation: scrollRight 100s linear infinite;
+}
+
+.integrationCard {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-4) var(--space-6);
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-full);
+  min-width: 240px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.integrationCard:hover {
+  background: var(--color-surface);
+  border-color: var(--color-action-primary);
+  transform: translateY(calc(var(--space-1) * -1));
+  box-shadow: var(--shadow-premium-soft), var(--glow-primary);
+}
+
+.integrationIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--space-10);
+  height: var(--space-10);
+  background: var(--color-background-primary);
+  border-radius: 50%;
+  border: 1px solid var(--glass-border);
+  color: var(--color-text-primary);
+  overflow: hidden;
+}
+
+.integrationImage {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+}
+
+.integrationCard:hover .integrationIcon {
+  color: var(--color-action-primary);
+  box-shadow: var(--glow-primary);
+}
+
+.integrationName {
+  font-weight: 600;
+}
+
+.integrationGlow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40%;
+  height: 100%;
+  background: var(--color-action-primary);
+  filter: blur(120px);
+  opacity: 0.05;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes scrollLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes scrollRight {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+@media (max-width: 768px) {
+  .integrationsSection {
+    padding: var(--space-10) 0;
+  }
+  
+  .integrationCard {
+    min-width: 200px;
+    padding: var(--space-3) var(--space-4);
+  }
+}

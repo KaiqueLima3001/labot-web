@@ -1,46 +1,37 @@
-import "./SectionHeader.css";
-
-import { cn } from "@/utils/cn";
-
-import { Badge } from "@/components/ui/Badge";
 import { Heading } from "@/components/ui/Heading";
 import { Text } from "@/components/ui/Text";
+import { Badge } from "@/components/ui/Badge";
 
 import type { SectionHeaderProps } from "./SectionHeader.types";
 
-import { sectionHeaderVariants } from "./SectionHeader.styles";
+import "./SectionHeader.css";
 
 export function SectionHeader({
-  badge,
-  heading,
+  eyebrow,
+  title,
   description,
-  centered = false,
-  className,
-  ...props
+  align = "center",
 }: SectionHeaderProps) {
   return (
-    <div
-      className={cn(
-        "section-header",
-        centered
-          ? sectionHeaderVariants.center
-          : sectionHeaderVariants.left,
-        className
-      )}
-      {...props}
-    >
-      {badge && (
-        <Badge variant="secondary">
-          {badge}
+    <div className={`section-header section-header--${align}`}>
+      {eyebrow && (
+        <Badge>
+          {eyebrow}
         </Badge>
       )}
 
-      <Heading as="h2" size="4xl">
-        {heading}
+      <Heading
+        as="h2"
+        size="4xl"
+      >
+        {title}
       </Heading>
 
       {description && (
-        <Text size="lg" variant="secondary">
+        <Text
+          size="lg"
+          variant="secondary"
+        >
           {description}
         </Text>
       )}

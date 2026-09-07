@@ -1,7 +1,13 @@
 import "./Button.css";
-import type { ButtonProps } from "./Button.types";
-import { buttonSizes, buttonVariants } from "./Button.styles";
+
 import { cn } from "@/utils/cn";
+
+import type { ButtonProps } from "./Button.types";
+
+import {
+  buttonSizes,
+  buttonVariants,
+} from "./Button.styles";
 
 export function Button({
   children,
@@ -22,17 +28,18 @@ export function Button({
         buttonVariants[variant],
         buttonSizes[size],
         fullWidth && "w-full",
+        loading && "button--loading",
         className
       )}
       disabled={disabled || loading}
       aria-busy={loading}
       {...props}
     >
-      {leftIcon}
+      {!loading && leftIcon}
 
       {loading ? "Carregando..." : children}
 
-      {rightIcon}
+      {!loading && rightIcon}
     </button>
   );
 }

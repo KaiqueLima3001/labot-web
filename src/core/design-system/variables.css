@@ -1,0 +1,140 @@
+:root{
+
+  /* COLORS */
+
+  --color-background-primary:#FFFFFF;
+  --color-background-secondary:#F8FAFC;
+  --color-background-tertiary:#EEF2FF;
+  --color-background-inverse:#0F172A;
+
+  --color-surface-primary:#FFFFFF;
+  --color-surface-secondary:#F8FAFC;
+  --color-surface-hover:#F1F5F9;
+
+  --color-text-primary:#0F172A;
+  --color-text-secondary:#475569;
+  --color-text-muted:#64748B;
+  --color-text-inverse:#FFFFFF;
+
+  --color-border-primary:#E2E8F0;
+  --color-border-secondary:#CBD5E1;
+  --color-border-focus:#4F46E5;
+
+  --color-action-primary:#4F46E5;
+  --color-action-primary-hover:#4338CA;
+
+  --color-action-secondary:#7C3AED;
+  --color-action-secondary-hover:#6D28D9;
+
+  --color-action-accent:#06B6D4;
+  --color-action-accent-hover:#0891B2;
+
+  --color-success:#22C55E;
+  --color-warning:#F59E0B;
+  --color-danger:#EF4444;
+  --color-info:#0EA5E9;
+
+  /* SPACING */
+
+  --space-1:4px;
+  --space-2:8px;
+  --space-3:12px;
+  --space-4:16px;
+  --space-5:20px;
+  --space-6:24px;
+  --space-8:32px;
+  --space-10:40px;
+  --space-12:48px;
+  --space-16:64px;
+  --space-20:80px;
+  --space-24:96px;
+  --space-30:120px;
+
+  /* RADIUS */
+
+  --radius-xs:6px;
+  --radius-sm:8px;
+  --radius-md:12px;
+  --radius-lg:16px;
+  --radius-xl:20px;
+  --radius-2xl:28px;
+  --radius-full:9999px;
+
+  /* TYPOGRAPHY */
+
+  --font-primary:"Inter",sans-serif;
+  --font-family-mono:"JetBrains Mono",monospace;
+
+  --text-xs:12px;
+  --text-sm:14px;
+  --text-base:16px;
+  --text-lg:18px;
+  --text-xl:20px;
+  --text-2xl:24px;
+  --text-3xl:30px;
+  --text-4xl:36px;
+  --text-5xl:48px;
+  --text-6xl:60px;
+
+  /* FONT WEIGHT */
+
+  --font-weight-regular:400;
+
+  --font-weight-medium:500;
+
+  --font-weight-semibold:600;
+
+  --font-weight-bold:700;
+
+  /* SHADOW */
+
+  --shadow-xs:0 1px 2px rgba(0,0,0,.05);
+  --shadow-sm:0 5px 15px rgba(15,23,42,.08);
+  --shadow-md:0 12px 30px rgba(15,23,42,.10);
+  --shadow-lg:0 20px 50px rgba(15,23,42,.12);
+  --shadow-xl:0 30px 80px rgba(15,23,42,.15);
+
+  /* Z INDEX */
+
+  --z-dropdown:1000;
+
+  --z-navbar:1100;
+
+  --z-modal:1200;
+
+  --z-toast:1300;
+
+  --z-tooltip:1400;
+
+  /* LINE HEIGHT */
+
+  --line-height-none:1;
+
+  --line-height-tight:1.2;
+
+  --line-height-normal:1.5;
+
+  --line-height-relaxed:1.7;
+
+  /* DURATION */
+
+  --duration-fast:150ms;
+
+  --duration-normal:250ms;
+
+  --duration-slow:350ms;
+
+  /* EASING */
+
+  --ease-default:cubic-bezier(.4,0,.2,1);
+
+  /* PREMIUM VISUAL EFFECTS */
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(15, 23, 42, 0.08);
+  --glass-blur: blur(16px);
+  
+  --glow-primary: 0 0 48px rgba(79, 70, 229, 0.15);
+  --shadow-premium-soft: 0 8px 30px rgba(15, 23, 42, 0.04);
+  --shadow-premium-hover: 0 20px 40px rgba(15, 23, 42, 0.12);
+
+}

@@ -1,35 +1,87 @@
-.button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+.button{
 
-  gap: var(--space-2);
+    position:relative;
 
-  border: none;
+    display:inline-flex;
 
-  border-radius: var(--radius-md);
+    align-items:center;
 
-  font-family: var(--font-primary);
-  font-weight: var(--font-weight-semibold);
+    justify-content:center;
 
-  cursor: pointer;
+    gap:var(--space-2);
 
-  transition:
-    background-color var(--duration-normal) var(--ease-default),
-    color var(--duration-normal) var(--ease-default),
-    border-color var(--duration-normal) var(--ease-default),
-    transform var(--duration-fast) var(--ease-default);
+    overflow:hidden;
+
+    border:none;
+
+    border-radius:var(--radius-lg);
+
+    font-family:var(--font-primary);
+
+    font-size:var(--text-base);
+
+    font-weight:var(--font-weight-semibold);
+
+    line-height:var(--line-height-none);
+
+    white-space:nowrap;
+
+    user-select:none;
+
+    cursor:pointer;
+
+    transition:
+        transform var(--duration-fast) var(--ease-default),
+        box-shadow var(--duration-normal) var(--ease-default),
+        background-color var(--duration-normal) var(--ease-default),
+        color var(--duration-normal) var(--ease-default),
+        border-color var(--duration-normal) var(--ease-default);
 }
 
-.button:hover {
-  transform: translateY(-1px);
+.button:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:var(--shadow-md);
 }
 
-.button:active {
-  transform: translateY(0);
+.button:active{
+
+    transform:translateY(0);
+
+    box-shadow:none;
 }
 
-.button:disabled {
-  cursor: not-allowed;
-  opacity: .6;
+.button:focus-visible{
+
+    outline:none;
+
+    box-shadow:
+        0 0 0 3px rgba(59,130,246,.18),
+        var(--shadow-md);
+}
+
+.button:disabled{
+
+    opacity:.55;
+
+    cursor:not-allowed;
+
+    transform:none;
+
+    box-shadow:none;
+}
+
+.button svg{
+
+    width:18px;
+
+    height:18px;
+
+    flex-shrink:0;
+}
+
+.button--loading{
+
+    pointer-events:none;
 }

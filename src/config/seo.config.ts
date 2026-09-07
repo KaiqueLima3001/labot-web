@@ -1,18 +1,25 @@
-import { siteConfig } from "./site";
-
 export const seoConfig = {
-  title: siteConfig.name,
-
-  description: siteConfig.description,
-
-  keywords: [
-    "RPA",
-    "Automação",
-    "Workflow",
-    "Software",
-    "Power Automate",
-    "Produtividade",
-  ],
-
-  robots: "index, follow",
-} as const;
+  titleDefault: 'Labot | Automatize processos com Inteligência Artificial',
+  titleTemplate: '%s | Labot',
+  description: 'Crie fluxos inteligentes para conectar sistemas, eliminar tarefas repetitivas e aumentar a produtividade da sua empresa sem escrever código.',
+  url: 'https://www.labot.com.br',
+  openGraph: {
+    type: 'website',
+    locale: 'pt_BR',
+    url: 'https://www.labot.com.br',
+    siteName: 'Labot',
+    images: [
+      {
+        url: 'https://www.labot.com.br/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Labot - Automação Inteligente',
+      },
+    ],
+  },
+  twitter: {
+    handle: '@labot',
+    site: '@labot',
+    cardType: 'summary_large_image',
+  },
+};

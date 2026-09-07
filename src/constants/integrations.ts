@@ -1,10 +1,10 @@
-export const integrations = [
+export const integrationsConstants = [
   {
     id: "google",
 
     name: "Google Workspace",
 
-    logo: "/logos/google.svg",
+    logo: "google",
 
     enabled: true,
   },
@@ -12,9 +12,9 @@ export const integrations = [
   {
     id: "slack",
 
-    name: "Slack",
+    name: "slack",
 
-    logo: "/logos/slack.svg",
+    logo: "slack",
 
     enabled: true,
   },
@@ -24,7 +24,7 @@ export const integrations = [
 
     name: "Discord",
 
-    logo: "/logos/discord.svg",
+    logo: "discord",
 
     enabled: false,
   },
@@ -34,7 +34,7 @@ export const integrations = [
 
     name: "Notion",
 
-    logo: "/logos/notion.svg",
+    logo: "notion",
 
     enabled: true,
   },
